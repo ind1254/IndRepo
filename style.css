@@ -1,0 +1,307 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::selection {
+    background: #0ef;
+    color: #1f242d;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+/* Section Base Styles */
+section {
+    padding: 100px 10%;
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 600px;
+    animation: slideLeft 1s ease forwards;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    animation: slideBottom 1s ease forwards;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.home-content p {
+    font-size: 16px;
+    animation: fadeIn 1s ease forwards;
+}
+
+.home-img img {
+    max-width: 450px;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+}
+
+/* About Section */
+.about {
+    background: #25282e;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0ef;
+    animation: slideLeft 1s ease forwards;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Skills Section */
+.skills {
+    background: #2c313a;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.skills h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0ef;
+    animation: slideRight 1s ease forwards;
+}
+
+.skills ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.skills ul li {
+    margin-bottom: 10px;
+    animation: slideLeft 1.2s ease forwards;
+}
+
+/* Portfolio Section */
+.portfolio {
+    background: #25282e;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0ef;
+    animation: slideBottom 1s ease forwards;
+}
+
+.portfolio ul {
+    list-style: none;
+    font-size: 18px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.portfolio ul li {
+    margin-bottom: 10px;
+    animation: slideRight 1.2s ease forwards;
+}
+
+.portfolio ul li a {
+    color: #0ef;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio ul li a:hover {
+    color: #fff;
+}
+
+/* Contact Section */
+.contact {
+    background: #2c313a;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.contact h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0ef;
+    animation: slideLeft 1s ease forwards;
+}
+
+.contact ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.contact ul li {
+    margin-bottom: 10px;
+    animation: slideTop 1.2s ease forwards;
+}
+
+.contact ul li a {
+    color: #0ef;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact ul li a:hover {
+    color: #fff;
+}
+
+/* Keyframes for Animations */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+
+
+}
+.highlight-blue {
+    color: #0ef;
+    animation: fadeIn 1.5s ease forwards;
+}
